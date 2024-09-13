@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+    {% block conteudo %}
+        <h1 href="">hello word</h1>
+        {% for anuncios in anuncio %}
+            <div class="col-md-3 mr-3 mb-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ anuncios.vaga }}</h3>
+                        <p class="card-title">{{ anuncios.tipo_de_oferta }}</p>
+                        <p class="card-title">{{ anuncios.categorias }}</p>
+                        <p class="card-text">Postado em {{ anuncios.data_anuncio }}</p>
+                        <a href="{{ anuncios.slug }}" class="btn btn-primary">Ver</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endblock  %}

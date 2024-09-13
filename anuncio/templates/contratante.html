@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    {% for contratante in contratantes %}
+        <div class="col-md-3 mr-3 mb-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title" href="{{ contratante.vaga.slug }}">{{ contratante.vaga }}</h3>
+                        <p class="card-title">{{ contratante.tipo_de_oferta }}</p>
+                        <p class="card-title">{{ contratante.categorias }}</p>
+                        <p class="card-text">Postado em {{ contratante.data_anuncio }}</p>
+                        <a href="{{ contratante.slug }}" class="btn btn-primary">Ver</a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+
+{% endblock %}

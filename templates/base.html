@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% include 'parciais/_head.html' %}
+    
+
+    <title>{% block title %}Rasputin{% endblock  %}</title>
+</head>
+<body>
+    {% include 'parciais/_nav.html' %}
+        
+    <div class="container">
+        <div class="row">
+            {% block conteudo %}
+            
+            {% endblock  %}
+        </div>
+    </div>
+    {% include 'parciais/_footer.html' %}
+
+</body>
+</html>

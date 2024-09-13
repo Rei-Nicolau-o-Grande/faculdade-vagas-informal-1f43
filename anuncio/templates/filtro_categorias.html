@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    {% for cat in cate %}
+        <div class="col-md-3 mr-3 mb-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ cat.vaga }}</h3>
+                        <p class="card-title">{{ cat.tipo_de_oferta }}</p>
+                        <p class="card-title">{{ cat.categorias }}</p>
+                        <p class="card-text">Postado em {{ cat.data_anuncio }}</p>
+                        <a href="{{ cat.slug }}" class="btn btn-primary">Ver</a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+
+{% endblock  %}

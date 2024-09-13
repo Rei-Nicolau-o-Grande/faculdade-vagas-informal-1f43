@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block conteudo %} 
+
+    {% for categoria in categorias %}
+        <h1>
+            <a href="{{ categoria.categorias }}">{{ categoria.categorias }}</a>
+        </h1>
+
+    {% endfor %}
+
+{% endblock %}

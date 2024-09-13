@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <div class="col">
+        <h1>{{ anuncio.vaga }}</h1>
+            
+        <h3>{{ anuncio.tipo_de_oferta }}</h3>
+
+        <h3>{{ anuncio.categorias }}</h3>
+        <h1>Descrição</h1>
+        
+        <p>{{ anuncio.descricao| linebreaks }}</p>
+        
+    </div>
+    <a href="">
+        <i class="fa-brands fa-whatsapp"></i>
+        Zap
+    </a>
+{% endblock  %}

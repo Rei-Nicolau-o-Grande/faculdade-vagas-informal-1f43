@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    {% for contratado in contratados %}
+        <div class="col-md-3 mr-3 mb-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ contratado.vaga }}</h3>
+                        <p class="card-title">{{ contratado.tipo_de_oferta }}</p>
+                        <p class="card-title">{{ contratado.categorias }}</p>
+                        <p class="card-text">Postado em {{ contratado.data_anuncio }}</p>
+                        <a href="{{ contratado.slug }}" class="btn btn-primary">Ver</a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+
+{% endblock %}
